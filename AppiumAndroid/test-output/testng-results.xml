@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="57621" started-at="2016-09-10T18:31:17Z" finished-at="2016-09-10T18:32:15Z">
+    <groups>
+      <group name="perf">
+        <method signature="AndroidTest.firstTestCase(java.lang.String, java.lang.String)[pri:0, instance:com.appium.android.AndroidTest@366e2eef]" name="firstTestCase" class="com.appium.android.AndroidTest"/>
+      </group> <!-- perf -->
+    </groups>
+    <test name="Test" duration-ms="57621" started-at="2016-09-10T18:31:17Z" finished-at="2016-09-10T18:32:15Z">
+      <class name="com.appium.android.AndroidTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.appium.android.AndroidTest@366e2eef]" name="setup" is-config="true" duration-ms="26477" started-at="2016-09-11T00:01:18Z" finished-at="2016-09-11T00:01:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="firstTestCase(java.lang.String, java.lang.String)[pri:0, instance:com.appium.android.AndroidTest@366e2eef]" name="firstTestCase" duration-ms="28211" started-at="2016-09-11T00:01:45Z" data-provider="credentials" finished-at="2016-09-11T00:02:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testuser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[testpassword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstTestCase -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appium.android.AndroidTest@366e2eef]" name="tearDown" is-config="true" duration-ms="1703" started-at="2016-09-11T00:02:13Z" finished-at="2016-09-11T00:02:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.appium.android.AndroidTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
