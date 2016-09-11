@@ -19,6 +19,14 @@ public class AndroidTest {
 
 	public AndroidDriver driver;
 
+	public AndroidDriver getDriver() {
+		return driver;
+	}
+
+	public void setDriver(AndroidDriver driver) {
+		this.driver = driver;
+	}
+
 	@BeforeMethod
 	public void setup() throws Exception
 	{
@@ -62,7 +70,7 @@ public class AndroidTest {
 		System.out.println(successMessage.getText());
 
 		// asserting the message displayed
-		Assert.assertEquals("Email address invalid.", successMessage.getText());
+		Assert.assertEquals("Email address invalid. T", successMessage.getText());
 
 		//Locating OK button
 		WebElement alertOK = (new WebDriverWait(driver, 10))
