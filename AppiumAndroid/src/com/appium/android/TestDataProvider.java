@@ -1,5 +1,6 @@
 package com.appium.android;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -88,9 +89,12 @@ public class TestDataProvider {
 				tempRowCount++ ;
 			}
 			
-		} catch (Exception e)
+		} catch (IOException e)
 		{
-			// TODO: handle exception
+			System.out.println("Issue in file read and write");
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
 
 		return finalData;

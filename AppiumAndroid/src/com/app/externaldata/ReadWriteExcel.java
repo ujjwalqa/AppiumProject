@@ -11,6 +11,8 @@ import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -36,12 +38,12 @@ public class ReadWriteExcel
 		HSSFRow row; 
 		HSSFCell cell;
 
-		Iterator rows = sheet.rowIterator();
+		Iterator<Row> rows = sheet.rowIterator();
 
 		while (rows.hasNext())
 		{
 			row=(HSSFRow) rows.next();
-			Iterator cells = row.cellIterator();
+			Iterator<Cell> cells = row.cellIterator();
 
 			while (cells.hasNext())
 			{
@@ -110,15 +112,14 @@ public class ReadWriteExcel
 	{
 		InputStream ExcelFileToRead = new FileInputStream("C:/1ExcelData/Test.xlsx");
 		XSSFWorkbook  wb = new XSSFWorkbook(ExcelFileToRead);
-		XSSFWorkbook test = new XSSFWorkbook(); 
 		XSSFSheet sheet = wb.getSheetAt(0);
 		XSSFRow row; 
 		XSSFCell cell;
-		Iterator rows = sheet.rowIterator();
+		Iterator<Row> rows = sheet.rowIterator();
 		while (rows.hasNext())
 		{
 			row=(XSSFRow) rows.next();
-			Iterator cells = row.cellIterator();
+			Iterator<Cell> cells = row.cellIterator();
 			rowContents.clear();
 			while (cells.hasNext())
 			{
@@ -147,19 +148,18 @@ public class ReadWriteExcel
 		InputStream ExcelFileToRead = new FileInputStream("C:/1ExcelData/Test.xlsx");
 		XSSFWorkbook  wb = new XSSFWorkbook(ExcelFileToRead);
 
-		XSSFWorkbook test = new XSSFWorkbook(); 
 
 		XSSFSheet sheet = wb.getSheetAt(0);
 		XSSFRow row; 
 		XSSFCell cell;
 		int rowCount = 0;
 		int columnCount = 0;
-		Iterator rows = sheet.rowIterator();
+		Iterator<Row> rows = sheet.rowIterator();
 
 		while (rows.hasNext())
 		{
 			row=(XSSFRow) rows.next();
-			Iterator cells = row.cellIterator();
+			Iterator<Cell> cells = row.cellIterator();
 			while (cells.hasNext())
 			{
 				cell=(XSSFCell) cells.next();
@@ -228,7 +228,7 @@ public class ReadWriteExcel
 		//		readXLSFile();
 		//
 		//		writeXLSXFile();
-		ReadWriteExcel rd = new ReadWriteExcel();
+		//ReadWriteExcel rd = new ReadWriteExcel();
 		//rd.readXLSXFile();
 //		for (String[] string : rd.readXLSXFile()) {
 //			for (String string2 : string) {
