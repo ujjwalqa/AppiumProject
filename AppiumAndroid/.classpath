@@ -26,5 +26,6 @@
 	<classpathentry kind="lib" path="C:/1Ujjwal-Personal/Jars/Selenium/lib/jna-platform-4.1.0.jar"/>
 	<classpathentry kind="lib" path="C:/1Ujjwal-Personal/Jars/Selenium/lib/netty-3.5.7.Final.jar"/>
 	<classpathentry kind="lib" path="C:/1Ujjwal-Personal/Jars/Selenium/lib/phantomjsdriver-1.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/1Ujjwal-Personal/Jars/commons-io-2.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

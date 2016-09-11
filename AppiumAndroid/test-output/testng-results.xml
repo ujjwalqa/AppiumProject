@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="57621" started-at="2016-09-10T18:31:17Z" finished-at="2016-09-10T18:32:15Z">
+  <suite name="Suite" duration-ms="51796" started-at="2016-09-11T06:22:17Z" finished-at="2016-09-11T06:23:08Z">
     <groups>
       <group name="perf">
-        <method signature="AndroidTest.firstTestCase(java.lang.String, java.lang.String)[pri:0, instance:com.appium.android.AndroidTest@366e2eef]" name="firstTestCase" class="com.appium.android.AndroidTest"/>
+        <method signature="AndroidTest.firstTestCase(java.lang.String, java.lang.String)[pri:0, instance:com.appium.android.AndroidTest@215be6bb]" name="firstTestCase" class="com.appium.android.AndroidTest"/>
       </group> <!-- perf -->
     </groups>
-    <test name="Test" duration-ms="57621" started-at="2016-09-10T18:31:17Z" finished-at="2016-09-10T18:32:15Z">
+    <test name="Test" duration-ms="51796" started-at="2016-09-11T06:22:17Z" finished-at="2016-09-11T06:23:08Z">
       <class name="com.appium.android.AndroidTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.appium.android.AndroidTest@366e2eef]" name="setup" is-config="true" duration-ms="26477" started-at="2016-09-11T00:01:18Z" finished-at="2016-09-11T00:01:45Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.appium.android.AndroidTest@215be6bb]" name="setup" is-config="true" duration-ms="25333" started-at="2016-09-11T11:52:18Z" finished-at="2016-09-11T11:52:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="firstTestCase(java.lang.String, java.lang.String)[pri:0, instance:com.appium.android.AndroidTest@366e2eef]" name="firstTestCase" duration-ms="28211" started-at="2016-09-11T00:01:45Z" data-provider="credentials" finished-at="2016-09-11T00:02:13Z">
+        <test-method status="FAIL" signature="firstTestCase(java.lang.String, java.lang.String)[pri:0, instance:com.appium.android.AndroidTest@215be6bb]" name="firstTestCase" duration-ms="21574" started-at="2016-09-11T11:52:43Z" data-provider="credentials" finished-at="2016-09-11T11:53:05Z">
           <params>
             <param index="0">
               <value>
@@ -27,10 +27,49 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Email address invalid.] but found [Email address invalid. T]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Email address invalid.] but found [Email address invalid. T]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.appium.android.AndroidTest.firstTestCase(AndroidTest.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstTestCase -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appium.android.AndroidTest@366e2eef]" name="tearDown" is-config="true" duration-ms="1703" started-at="2016-09-11T00:02:13Z" finished-at="2016-09-11T00:02:15Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appium.android.AndroidTest@215be6bb]" name="tearDown" is-config="true" duration-ms="1536" started-at="2016-09-11T11:53:07Z" finished-at="2016-09-11T11:53:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
