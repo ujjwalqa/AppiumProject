@@ -32,6 +32,7 @@ public class ReporterListener implements IReporter {
 		 * Getting all test methods by group
 		 */
 		Map<String, Collection<ITestNGMethod>> methodsByGroup = suite.getMethodsByGroups();
+		List<ITestNGMethod>  allMethods = suite.getAllMethods();
 
 		/*
 		 * Collecting results by grouping suites in Map
@@ -65,6 +66,40 @@ public class ReporterListener implements IReporter {
 		 */
 		Collection<String> groupList = methodsByGroup.keySet();
 
+		/*
+		 * get test case list by method name
+		 */
+		for (ITestNGMethod method : allMethods) {
+			
+			String groupName = "";
+			
+			for (String group : method.getGroups()) {
+				groupName = groupName+group+" ";
+			}
+			
+			if(groupName.equalsIgnoreCase(""))
+				groupName = "Default ";
+			
+			IResultMap failedTests = testContext.getFailedTests();
+
+			Set<ITestResult> testResultSetFailed = failedTests.getResults(method);
+			for (ITestResult testResultFailed : testResultSetFailed) {
+				System.out.println("Test " + "Group: "+ groupName+" " + testResultFailed.getName() + " failed, error " + testResultFailed.getThrowable());
+			}
+
+			IResultMap passedTests = testContext.getPassedTests();
+
+			Set<ITestResult> testResultSetPassed = passedTests.getResults(method);
+			for (ITestResult testResultPassed : testResultSetPassed) {
+				System.out.println("Test " + "Group: "+ groupName+" " +testResultPassed.getName() + " passed, time took " + 
+						(testResultPassed.getStartMillis() - testResultPassed.getEndMillis()));
+			}
+		}
+		
+		/*
+		 * get test case list by group name
+		 */
+/*		
 		for (String group : groupList) {
 
 			Collection<ITestNGMethod> perfMethods = methodsByGroup.get(group);
@@ -88,6 +123,7 @@ public class ReporterListener implements IReporter {
 			}
 
 		}
+*/
 
 
 		System.out.println("*****End of Report******");
