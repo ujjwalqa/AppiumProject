@@ -5,9 +5,9 @@
     <classes>
       <class name="com.appium.android.AndroidTest">
         <methods>
-          <include name="tearDown"/>
+          <include name="validateInvalidEmail"/>
           <include name="setup"/>
-          <include name="firstTestCase" invocation-numbers="0"/>
+          <include name="testClassSetUp"/>
         </methods>
       </class> <!-- com.appium.android.AndroidTest -->
     </classes>

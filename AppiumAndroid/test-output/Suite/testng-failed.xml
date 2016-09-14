@@ -4,14 +4,14 @@
   <listeners>
     <listener class-name="com.app.listeners.TestListeners"/>
     <listener class-name="com.app.listeners.ReporterListener"/>
+    <listener class-name="com.app.listeners.RetryListener"/>
   </listeners>
   <test name="Test(failed)">
     <classes>
       <class name="com.appium.android.AndroidTest">
         <methods>
-          <include name="tearDown"/>
+          <include name="validateInvalidEmail"/>
           <include name="setup"/>
-          <include name="firstTestCase" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.appium.android.AndroidTest -->
     </classes>
