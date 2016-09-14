@@ -4,6 +4,7 @@
 	<listeners>
 		<listener class-name="com.app.listeners.TestListeners" />
 		<listener class-name="com.app.listeners.ReporterListener"/>
+		<listener class-name="com.app.listeners.RetryListener"></listener>
 	</listeners>
 
 	<test name="Test">
