@@ -10,7 +10,6 @@ import com.app.externaldata.ReadWriteExcel;
 
 public class TestDataProvider {
 
-	
 	/*
 	 * Provide user name and password from excel 
 	 */
@@ -89,10 +88,7 @@ public class TestDataProvider {
 				tempRowCount++ ;
 			}
 			
-		} catch (IOException e)
-		{
-			System.out.println("Issue in file read and write");
-		}
+		} 
 		catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
