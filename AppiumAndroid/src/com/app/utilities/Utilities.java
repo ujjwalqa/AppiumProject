@@ -17,14 +17,19 @@ import org.openqa.selenium.WebDriver;
 public class Utilities
 
 {
+	/**
+	 * 
+	 * @param driver
+	 * @param testStatus Failed/Passed
+	 */
 	
-	public static void takeScreenshot(WebDriver driver)
+	public static void takeScreenshot(WebDriver driver, String testStatus)
 	{
 		String destDir;
 		DateFormat dateFormat;
 
 		// Set folder name to store screenshots.
-		destDir = "screenshots";
+		destDir = "screenshots/"+testStatus;
 		// Capture screenshot.
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		// Set date format to set It as screenshot file name.
