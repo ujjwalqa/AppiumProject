@@ -107,20 +107,30 @@ public class ReadWriteExcel
 	 * Read rows from xlsx file
 	 */
 
-	public  ArrayList<ArrayList<String>> readXLSXFile() throws IOException
+	public  ArrayList<ArrayList<String>> readXLSXFile()
 
 	{
-		InputStream ExcelFileToRead = new FileInputStream("C:/1ExcelData/Test.xlsx");
-		XSSFWorkbook  wb = new XSSFWorkbook(ExcelFileToRead);
-		XSSFSheet sheet = wb.getSheetAt(0);
-		XSSFRow row; 
+		InputStream ExcelFileToRead =null;
+		XSSFWorkbook  wb = null;
+		XSSFSheet sheet = null;;
+		XSSFRow row = null; 
 		XSSFCell cell;
+		
+		try {
+			ExcelFileToRead = new FileInputStream("C:/1ExcelData/Test.xlsx");
+			wb = new XSSFWorkbook(ExcelFileToRead);
+			sheet = wb.getSheetAt(0);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
 		Iterator<Row> rows = sheet.rowIterator();
 		while (rows.hasNext())
 		{
 			row=(XSSFRow) rows.next();
 			Iterator<Cell> cells = row.cellIterator();
-			rowContents.clear();
+			
 			while (cells.hasNext())
 			{
 				cell=(XSSFCell) cells.next();
@@ -137,7 +147,7 @@ public class ReadWriteExcel
 			}
 			dataRow.add(rowContents);
 			
-			//rowContents = new ArrayList<String>();
+			rowContents = new ArrayList<String>();
 		}
 		return dataRow;
 	}
