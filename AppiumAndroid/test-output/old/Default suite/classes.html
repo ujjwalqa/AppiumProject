@@ -4,7 +4,7 @@
 <th>Method name</th>
 <th>Groups</th>
 </tr><tr>
-<td>com.appium.android.AndroidTest</td>
+<td>com.app.android.AndroidTest</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
@@ -12,18 +12,34 @@
 <tr>
 <td>&nbsp;</td>
 <td>validateInvalidEmail</td>
+<td>Negative TestFunctional </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>DoNotEnterEmailPassword</td>
+<td>Negative </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>checkLoginWithValidEmailPassword</td>
 <td>Functional </td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>SecondTestCase</td>
-<td>&nbsp;</td></tr>
+<td>DoNotEnterPasswordButEmail</td>
+<td>Negative </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifySignUpWithValidInformations</td>
+<td>Functional </td>
+</tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>testClassSetUp</td>
+<td>startAppiumAndEmulator</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeMethod</td>
@@ -44,6 +60,6 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>testClassCleanup</td>
+<td>stopAppiumAndEmulator</td>
 <td>&nbsp;</td></tr>
 </table>

@@ -1,15 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" parallel="tests" thread-count="2">
 	<listeners>
 		<listener class-name="com.app.listeners.TestListeners" />
-		<listener class-name="com.app.listeners.ReporterListener"/>
+		<listener class-name="com.app.listeners.ReporterListener" />
 		<listener class-name="com.app.listeners.RetryListener"></listener>
 	</listeners>
 
-	<test name="Test">
+	<test name="TestOnEmulator1">
+		<parameter name="appiumServer" value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="appiumPort" value="4723" />
+		<parameter name="deviceUDID" value=""/> <!-- Keep value="" if using emulator    410a1c8e6227c000-->
+		<parameter name="emulatorName" value="demoemu" />
+		<parameter name="emulatorPort" value="5554" />
+		<parameter name="apkPath"
+			value="APK\\de.komoot.android-7.2.8-www.APK4Fun.com.apk" />
 		<classes>
-			<class name="com.appium.android.AndroidTest" />
+			<class name="com.app.android.AndroidTest">
+				<methods>
+					<include name="DoNotEnterEmailPassword"></include>
+				</methods>
+			</class>
+
 		</classes>
 	</test> <!-- Test -->
+
+	<test name="TestOnEmulator2" enabled="false">
+		<parameter name="appiumServer" value="http://127.0.0.1:4743/wd/hub" />
+		<parameter name="appiumPort" value="4743" />
+		<parameter name="deviceUDID" value=""/> <!-- Keep value="" if using emulator-->
+		<parameter name="emulatorName" value="demoemu2" />
+		<parameter name="emulatorPort" value="5556" />
+		<parameter name="apkPath"
+			value="APK\\de.komoot.android-7.2.8-www.APK4Fun.com1.apk" />
+		<classes>
+			<class name="com.app.android.AndroidTest">
+				<methods>
+					<include name="verifySignUpWithValidInformations"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
 </suite> <!-- Suite -->
